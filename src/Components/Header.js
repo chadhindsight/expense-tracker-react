@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-           Expense tracker
+            <h1>Expense tracker</h1>
         </div>
     );
 };
