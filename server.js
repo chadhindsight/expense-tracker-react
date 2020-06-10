@@ -9,7 +9,8 @@ dotenv.config({path: './config/config.env'});
 const app = express();
 
 const transactions = require('./routes/transactions');
-
+// Allows you to connect to the transaction routes from the transations file
+app.use('/api/v1/transactions', transactions)
 
 // Access your global variables stored in config folder
 const PORT = process.env.PORT || 5000
