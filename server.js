@@ -1,4 +1,5 @@
 const express = require("express");
+// Allows you to use environmental variables
 const dotenv = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
@@ -7,7 +8,8 @@ dotenv.config({path: './config/config.env'});
 // Initialize your express thing
 const app = express();
 
-app.get('/', (req,res)=> res.send('Hello'));
+const transactions = require('./routes/transactions');
+
 
 // Access your global variables from config folder
 const PORT = process.env.PORT || 5000
