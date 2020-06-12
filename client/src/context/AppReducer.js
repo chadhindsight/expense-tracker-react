@@ -2,7 +2,7 @@
 // specifies how state will change
 export default (state, action) => {
     switch (action.type) {
-        case 'GET_TRANSACTIONS': 
+        case 'GET_TRANSACTIONS':
             return {
                 ...state,
                 loading: false,
@@ -11,8 +11,7 @@ export default (state, action) => {
         case 'DELETE_TRANSACTION':
             return {
                 ...state,
-                // Filter out anything that matches the id of action.paload
-                transactions: state.transactions.filter(transaction => transaction.id !== action.payload)
+                transactions: state.transactions.filter(transaction => transaction._id !== action.payload)
             }
         case 'ADD_TRANSACTION':
             return {
@@ -23,7 +22,7 @@ export default (state, action) => {
             return {
                 ...state,
                 error: action.payload
-            }    
+            }
         default:
             return state;
     }

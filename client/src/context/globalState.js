@@ -18,12 +18,12 @@ export const GlobalProvider = ({ children }) => {
     // Actions
     async function getTransactions(params) {
         try {
-            const response = await axios.get('/api/v1/transactions') 
+            const response = await axios.get('http://localhost:5000/api/v1/transactions') 
             dispatch({
                 type: "GET_TRANSACTIONS",
                 payload: response.data.data
             })
-
+            console.log(response.data.data)
         }catch(err) {
             dispatch({
                 type: "TRANSACTION_ERROR",
