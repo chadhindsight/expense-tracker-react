@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div>
-            <h1>Expense tracker</h1>
+            <h1>Expense Tracker</h1>
         </div>
     );
 };
